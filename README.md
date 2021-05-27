@@ -1,23 +1,41 @@
-# cAr-drIve
-cAr-drIve - reinforcement learning for simulated self-driving car
+### What is this?
 
-This is a project that allows to train an AI able to drive alongside any track built from pre-defined pieces.
+Its an environment for machine learning. <br>
+NOTE: this will just be one component for a machine learning project. It's designed to be included as a submodule on other projects. <br>
+This uses Unity ML-Agent repo, see that repo for lots of documentation.
 
-![Self-tought AI on a race track](https://miro.medium.com/max/800/1*IkRIQavCAPI96PH3XE36xQ.gif)
+### Setup
 
-This is the code for an accompanying [Medium article](http://medium.com/p/60b0e7a10d9e), for details on the content, please check the article.
+1. Download or clone this repository (Note: it is currently quite large)<br>
+    `git clone --recursive https://github.com/jeff-hykin/unity_basic_car_track.git`
+    
+2. Download Unity Hub (from an App Store, Package manger, or Unity's website)
+    - agree to the license thing (green arrow)
+    - press back (yellow arrow)
+    <img src="/documentation/images/activate.png" alt="where-to-click">
+    
+    - go to projects (should be empty)
+    <img src="/documentation/images/unity_hub.png" alt="where-to-click">
 
-## Requirements
-This project needs the ML-Agents environment version 0.15.0 to be set up. At best I'd suggest to follow the [official installation guide](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md). However the following steps should suffice:
+    - click the "Add", find the model_racer folder you just downloaded, inside that folder go into the `unity` folder, and inside that open the `car-track-environment` folder
+    - Then click the name of the project ("car-track-environment"), and there should be a black pop-up (at the bottom) like this
+    <img src="/documentation/images/install_prompt.png" alt="where-to-click">
+    
+    - Click install, then try opening the project again
 
-1. Get Python 3.6 64-bit (the 64 bit seems necessary, at least on Windows)
-2. Get Unity 2020.1+
-3. Download the ML-Agents 1.0.0+ package (see https://github.com/Unity-Technologies/ml-agents/blob/release_12_docs/docs/Installation.md)
-4. Install dependencies: `pip3 install "mlagents"`
-5. Clone this repository
-6. Open project in Unity
+3. Opening up the scene
+    - You won't see the blue guy, but your menus should look something like this
+    <img src="/documentation/images/car_track_scene.png" alt="where-to-click">
 
-## Scenes
-* **CarTrain** This scene is used for training a model.  
-* **CarTest** This scene contains a different track for verification of the trained model.  
-* **CarPlay** This scene contains a set of 3 Agents and a car controlled by the player to mimic a game scenario.  
+    - Under the project tab (White arrow)
+    - Select `Assets` (Lime green arrow)
+    - Select `Scenes` (Green arrow)
+    - Select `CarTrainPython.unity` (Blue arrow)
+4. Now you should be able to see the car/track! 
+5. Start the python listener (there should be instructions in a seperate repo ([example](https://github.com/jeff-hykin/model_racer)) for this) 
+6. Now, go back to the Unity App and click the start button
+<img src="/documentation/images/car_track_scene_ready_to_start.png" alt="description">
+
+7. (you should see output inside the terminal now!)
+8. If you want to modify the camera resolution, follow click the carcam (lime green), then go to the inspector, and scroll down until you see the camera settings.
+<img src="/documentation/images/camera_sensor.png" alt="description">
